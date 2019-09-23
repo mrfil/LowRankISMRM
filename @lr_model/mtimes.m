@@ -43,7 +43,7 @@ end
        obj_adj = reshape(obj_adj, [N*N N_tpt]);
        
        for jj = 1:L
-           spat_map_up(:,jj) = obj_adj*time_basis(:,jj);
+           spat_map_up(:,jj) = obj_adj*(time_basis(:,jj)'.');
        end
        vo = spat_map_up(:);
        

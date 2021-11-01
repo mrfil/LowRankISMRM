@@ -18,7 +18,7 @@ end
        obj_pred = zeros(N*N, N_tpt);
        spat_map = reshape(vi,[N*N L]);
        for jj = 1:L
-           obj_pred = obj_pred + spat_map(:,jj)*(time_basis(:,jj).');
+           obj_pred = obj_pred + spat_map(:,jj)*(time_basis(:,jj)');
        end
        
        % Simulation IMAGING SIGNAL == GET RANDOMIZED OR LINEAR LINE OF KSPACE
@@ -43,7 +43,7 @@ end
        obj_adj = reshape(obj_adj, [N*N N_tpt]);
        
        for jj = 1:L
-           spat_map_up(:,jj) = obj_adj*(time_basis(:,jj)'.');
+           spat_map_up(:,jj) = obj_adj*(time_basis(:,jj));
        end
        vo = spat_map_up(:);
        

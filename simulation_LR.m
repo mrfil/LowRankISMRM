@@ -105,7 +105,7 @@ if 1
         imagesc(reshape(U_truth(:,jj),[N N]))
         colormap gray
     end
-    suptitle('First 4 spatial maps from Ground Truth SVD')
+    title('First 4 spatial maps from Ground Truth SVD')
     print -dpng pl_spatMapSVD_GroundTruth
     
 end
